@@ -3,3 +3,9 @@
   <%= f.text_area :description %>
   <%= f.submit "Submit", :disable_with => 'Submiting...'  %>
 <% end %>
+
+<% if @group.errors.any? %>
+  <% @group.errors.full_messages.each do |msg| %>
+    <%= msg %>
+  <% end %>
+<% end %>
