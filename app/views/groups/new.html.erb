@@ -1,0 +1,5 @@
+<%= form_for @group do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :description %>
+  <%= f.submit "Submit", :disable_with => 'Submiting...'  %>
+<% end %>
