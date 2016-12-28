@@ -1,0 +1,13 @@
+<%= form_for @group do |f| %>
+
+<% if @group.errors.any? %>
+  <% @group.errors.full_messages.each do |msg| %>
+    <%= msg %>
+  <% end %>
+<% end %>
+
+
+<%= f.text_field :title %>
+<%= f.text_area :description %>
+<%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end %>
